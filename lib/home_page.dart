@@ -50,12 +50,28 @@ class HomePageState extends State<HomePage>{
                   width: 50,
                   height: 50,
                   color: Color.fromARGB(255, 20, 20, 20),
-                )
+                ),
+                Container(
+                  height: 20,
+                ),
+                RaisedButton(onPressed: () async {
+                  Navigator.of(context).pushReplacementNamed ('/pagamento');
+                }, 
+                child: Text("Cadastro"),
+                color: Color.fromRGBO(223,128,33,1),),
+                RaisedButton(onPressed: () async {
+                  Navigator.of(context).pushReplacementNamed ('/Filmes');
+                }, 
+                child: Text("Filmes"),
+                color: Color.fromRGBO(223,128,33,1),),
               ],
+              
             )
+
           ],
         ),
       ),
+
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: (){
@@ -80,3 +96,14 @@ class switch1 extends StatelessWidget {
       },);
   }
 }
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          Container(color: Color.fromRGBO(9,32,66,1)),
+        ],
+      )
+    );
+  }
