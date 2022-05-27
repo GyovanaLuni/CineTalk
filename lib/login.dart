@@ -14,6 +14,24 @@ class _loginState extends State<login> {
   String senha= "";
 
   Widget _body(){
+    var row = Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                children: [
+                
+                RaisedButton(onPressed: (){
+
+                },
+                child: Text('Google'),
+                color: Color.fromARGB(255, 255, 255, 255),),
+
+                RaisedButton(onPressed: (){
+                }, 
+                child: Text("Facebook"),
+                color: Color.fromARGB(255, 255, 255, 255),),
+                
+                ],
+                );
     return SingleChildScrollView(
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
@@ -72,24 +90,7 @@ class _loginState extends State<login> {
                   height: 30,
                 ),
                 Container(  
-                child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-                children: [
-                
-                RaisedButton(onPressed: (){
-
-                },
-                child: Text('Google'),
-                color: Color.fromARGB(255, 255, 255, 255),),
-
-                RaisedButton(onPressed: (){
-                }, 
-                child: Text("Facebook"),
-                color: Color.fromARGB(255, 255, 255, 255),),
-                
-                ],)
-                
+                child: row
                 )
               ],
             ),
@@ -103,7 +104,19 @@ class _loginState extends State<login> {
     return Scaffold(
       body: Stack(
         children: [
-          Container(color: Color.fromRGBO(9,32,66,1)),
+          Container(  
+          height: 1000,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Color.fromARGB(255, 0, 33, 79),
+                Color.fromARGB(255, 1, 53, 72),
+              ],
+            )
+          ), 
+        ),
           _body(),
         ],
       )
