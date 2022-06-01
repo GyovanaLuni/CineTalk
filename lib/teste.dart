@@ -1,14 +1,16 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mercado_pago_mobile_checkout/mercado_pago_mobile_checkout.dart';
 
-class Filmes extends StatefulWidget {
+
+
+class Principal extends StatefulWidget {
   @override
-  _FilmesState createState() => _FilmesState();
+  _PrincipalState createState() => _PrincipalState();
 }
 
-class _FilmesState extends State<Filmes> {
+class _PrincipalState extends State<Principal> {
+  
   final List<String> imageList = [
     'https://pbs.twimg.com/media/E_qHbEYXIAQzRUu.jpg:large',
     'https://uauposters.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/9/1/911720211216-uau-posters-jujutsu-kaisen-animes-3.jpg',
@@ -30,7 +32,7 @@ class _FilmesState extends State<Filmes> {
                   width: 10,
                 ),
                 Container(
-                  child:Text('Olá <Pessoa>', style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20)),
+                  child:Text('Olá, <Pessoa!>', style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20)),
                 )
               ],
             )
@@ -46,7 +48,7 @@ class _FilmesState extends State<Filmes> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   RaisedButton(onPressed: () async {
-                  Navigator.of(context).pushReplacementNamed ('/pagamento');
+                  Navigator.of(context).pushReplacementNamed ('/Cinemas');
                 }, 
                   child: Text("Compre seu ingresso"),
                   color: Color.fromRGBO(223,128,33,1),),   

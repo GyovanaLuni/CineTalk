@@ -60,7 +60,7 @@ class HomePageState extends State<HomePage>{
                 child: Text("Cadastro"),
                 color: Color.fromRGBO(223,128,33,1),),
                 RaisedButton(onPressed: () async {
-                  Navigator.of(context).pushReplacementNamed ('/Filmes');
+                  Navigator.of(context).pushReplacementNamed ('/Principal');
                 }, 
                 child: Text("Filmes"),
                 color: Color.fromRGBO(223,128,33,1),),
