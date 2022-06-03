@@ -6,13 +6,20 @@ import 'package:cinetalk/login.dart';
 import 'package:cinetalk/pagamento.dart';
 import 'package:cinetalk/teste.dart';
 import 'package:flutter/material.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'home_page.dart';
 
 
 class AppW extends StatelessWidget{
   @override
   Widget build(BuildContext context) {  
+    
+    FirebaseFirestore.instance.collection('Crud').get().then((value) {
+      value.docs.forEach((element) {
+        print(element.data);
+      });
+    });
+    
     return AnimatedBuilder(
       animation: controller.instance,
       builder: (BuildContext context, Widget? child) { 
