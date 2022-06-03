@@ -15,14 +15,15 @@ class _Cinemas1State extends State<Cinemas1> {
       
       children: [
         Container(
-          height: 20,
+          height: 30,
         ),
         RaisedButton(onPressed: () async {
         Navigator.of(context).pushReplacementNamed ('/Principal');
         }, 
+        child: Text('Voltar'),
         color: Color.fromRGBO(223,128,33,1),), 
         Container(
-          height: 60,
+          height: 45,
         ),
         Container(
             width: 340.0,
@@ -52,7 +53,7 @@ class _Cinemas1State extends State<Cinemas1> {
               RaisedButton(onPressed: () async {
               Navigator.of(context).pushReplacementNamed ('/Filmes');
               }, 
-              child: Image.asset('assets/imgs/pipoca.png', width: 70, height: 170,),
+              child: Image.asset('assets/imgs/Tacaruna.jpg', width: 70, height: 170,),
             ),  
             Container(
               width: 10,
@@ -70,7 +71,7 @@ class _Cinemas1State extends State<Cinemas1> {
               RaisedButton(onPressed: () async {
               Navigator.of(context).pushReplacementNamed ('/Filmes');
               }, 
-              child: Image.asset('assets/imgs/pipoca.png', width: 70, height: 170,),
+              child: Image.asset('assets/imgs/RioMar.jpg', width: 70, height: 170,),
             ),  
             Container(
               width: 10,
@@ -88,7 +89,7 @@ class _Cinemas1State extends State<Cinemas1> {
               RaisedButton(onPressed: () async {
               Navigator.of(context).pushReplacementNamed ('/Filmes');
               }, 
-              child: Image.asset('assets/imgs/pipoca.png', width: 70, height: 170,),
+              child: Image.asset('assets/imgs/Nw.jpg', width: 70, height: 170,),
             ),  
             Container(
               width: 10,

@@ -1,4 +1,5 @@
 import 'package:cinetalk/Cinemas.dart';
+import 'package:cinetalk/cadeiras.dart';
 import 'package:cinetalk/controlador.dart';
 import 'package:cinetalk/filmes.dart';
 import 'package:cinetalk/login.dart';
@@ -26,6 +27,8 @@ class AppW extends StatelessWidget{
           '/Filmes':(context) => Filmes1(),
           '/Principal':(context) => Principal(),
           '/Cinemas':(context) => Cinemas1(),
+          '/Cadeiras':(context) => Cadeiras1(),
+          '/Filmesin':(context) => Filmes1(),
         }
       );    
       },

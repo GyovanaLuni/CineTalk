@@ -21,7 +21,9 @@ class _Filmes1State extends State<Filmes1> {
         RaisedButton(onPressed: () async {
         Navigator.of(context).pushReplacementNamed ('/Cinemas');
         }, 
+        child: Text('Voltar'),
         color: Color.fromRGBO(223,128,33,1),),
+        
         Container(
           height: 20,
         ),
@@ -31,14 +33,14 @@ class _Filmes1State extends State<Filmes1> {
                   RaisedButton(onPressed: () async {
                   Navigator.of(context).pushReplacementNamed ('/home');
                 }, 
-                  child: Image.asset('assets/imgs/pipoca.png', width: 100, height: 200,),
-
+                  child: Image.asset('assets/imgs/aranha.png', width: 100, height: 200,),
+                  color: Color.fromARGB(42, 255, 255, 255),
                   ),  
                   RaisedButton(onPressed: () async {
                   Navigator.of(context).pushReplacementNamed ('/home');
                 }, 
-                  child: Image.asset('assets/imgs/pipoca.png', width: 100, height: 200,),
-                  
+                  child: Image.asset('assets/imgs/matrix.png', width: 100, height: 200,),
+                  color: Color.fromARGB(42, 255, 255, 255),
                   ),
                 ],
               ),
@@ -51,14 +53,14 @@ class _Filmes1State extends State<Filmes1> {
                   RaisedButton(onPressed: () async {
                   Navigator.of(context).pushReplacementNamed ('/home');
                 }, 
-                  child: Image.asset('assets/imgs/pipoca.png', width: 100, height: 200,),
-
+                  child: Image.asset('assets/imgs/eternos.png', width: 100, height: 200,),
+                  color: Color.fromARGB(42, 255, 255, 255),
                   ),  
                   RaisedButton(onPressed: () async {
                   Navigator.of(context).pushReplacementNamed ('/home');
                 }, 
-                  child: Image.asset('assets/imgs/pipoca.png', width: 100, height: 200,),
-                  
+                  child: Image.asset('assets/imgs/red.png', width: 100, height: 200,),
+                  color: Color.fromARGB(42, 255, 255, 255),
                   ),
                 ],
               ),
@@ -71,15 +73,16 @@ class _Filmes1State extends State<Filmes1> {
                   RaisedButton(onPressed: () async {
                   Navigator.of(context).pushReplacementNamed ('/home');
                 }, 
-                  child: Image.asset('assets/imgs/pipoca.png', width: 100, height: 200,),
-
+                  child: Image.asset('assets/imgs/shang.png', width: 100, height: 200,),
+                  color: Color.fromARGB(42, 255, 255, 255),
                   ),  
                   RaisedButton(onPressed: () async {
                   Navigator.of(context).pushReplacementNamed ('/home');
-                }, 
-                  child: Image.asset('assets/imgs/pipoca.png', width: 100, height: 200,),
                   
-                  ),
+                }, 
+                  child: Image.asset('assets/imgs/encan.png', width: 100, height: 200,),
+                  color: Color.fromARGB(42, 255, 255, 255),),
+                
                 ],
               ),
             ],

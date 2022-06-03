@@ -1,4 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:cinetalk/cadeiras.dart';
+import 'package:cinetalk/filmesin.dart';
+import 'package:cinetalk/home_page.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -10,7 +14,9 @@ class Principal extends StatefulWidget {
 }
 
 class _PrincipalState extends State<Principal> {
-  
+
+  int index = 0;
+
   final List<String> imageList = [
     'https://pbs.twimg.com/media/E_qHbEYXIAQzRUu.jpg:large',
     'https://uauposters.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/9/1/911720211216-uau-posters-jujutsu-kaisen-animes-3.jpg',
@@ -22,14 +28,14 @@ class _PrincipalState extends State<Principal> {
     return Column(
       children: [
         Container(
-          height: 20,
+          height: 50,
         ),
         Container(
           child: Column(children: [
             Row(
               children: [
                 Container(
-                  width: 10,
+                  width: 30,
                 ),
                 Container(
                   child:Text('Olá, <Pessoa!>', style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20)),
@@ -39,7 +45,7 @@ class _PrincipalState extends State<Principal> {
           ],)  
         ),     
         Container(
-          height: 30,
+          height: 5,
         ),
         Container(
           child: Column(
@@ -103,33 +109,40 @@ class _PrincipalState extends State<Principal> {
 
   @override
   Widget build(BuildContext context) {
+
+    final telas = [
+      HomePage(),
+      Cadeiras1(),
+      Filmesin1(),
+      HomePage(),
+      HomePage(),
+    ];
+
+    final items = <Widget>[
+      Icon(Icons.home, size: 30,),
+      Icon(Icons.search, size: 30,),
+      Icon(Icons.favorite, size: 30,),
+      Icon(Icons.person, size: 30,),
+      Icon(Icons.settings, size: 30,),
+    ];
+
     return Scaffold(
-      drawer: Drawer(
-        backgroundColor: Color.fromARGB(116, 2, 57, 134),
-        child: Column(
-          children: [
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Home'),
-              onTap: (){
-                print('gyo linda');
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Sair'),
-              onTap: (){
-                Navigator.of(context).pushReplacementNamed('/');
-              },
-            )
-          ]),
-      ),
-       appBar: AppBar(
-        toolbarHeight: 75,
-        elevation: 0.0,
-        bottomOpacity: 0.0,
-        backgroundColor: Color.fromARGB(207, 1, 43, 102),
-      ),
+      
+      extendBody: true,    
+      bottomNavigationBar: Theme(
+        data: Theme.of(context).copyWith(
+          iconTheme: IconThemeData(color:Color.fromARGB(255, 0, 32, 44),),
+        ),
+        child:CurvedNavigationBar(   
+          color: Color.fromRGBO(223,128,33,1),
+          backgroundColor: Color.fromARGB(0, 255, 0, 0),
+          height: 60,
+          index: index,
+          items: items,
+          onTap: (index) => setState(() => this.index = index),
+        ),
+        ),
+      
       body: Stack(
         children: [
           Container(  
