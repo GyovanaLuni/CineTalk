@@ -11,17 +11,20 @@ class Cinemas1 extends StatefulWidget {
 class _Cinemas1State extends State<Cinemas1> {
   
   Widget _body(){
-    return Column(
-      
+    return SingleChildScrollView(
+      child: Column(
       children: [
         Container(
           height: 30,
         ),
-        RaisedButton(onPressed: () async {
+        RaisedButton.icon(onPressed: () async {
         Navigator.of(context).pushReplacementNamed ('/Principal');
         }, 
-        child: Text('Voltar'),
-        color: Color.fromRGBO(223,128,33,1),), 
+        icon: Icon(
+        Icons.arrow_back
+        ),
+        label: Text('Voltar'),
+        color: Color.fromRGBO(223,128,33,1),),
         Container(
           height: 45,
         ),
@@ -98,6 +101,7 @@ class _Cinemas1State extends State<Cinemas1> {
           ],
         ),
       ],
+      ),
     );
   }
 

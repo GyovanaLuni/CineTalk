@@ -17,7 +17,11 @@ class _Cadeiras1State extends State<Cadeiras1> {
         Container(
           height: 20,
         ),
-        
+           RaisedButton(onPressed: () async {
+                  Navigator.of(context).pushReplacementNamed ('/Principal');
+                }, 
+                child: Text("Filmes"),
+                color: Color.fromRGBO(223,128,33,1),),
           ],
         );
   }

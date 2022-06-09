@@ -18,12 +18,14 @@ class _Filmes1State extends State<Filmes1> {
               Container(
           height: 30,
         ),
-        RaisedButton(onPressed: () async {
+        RaisedButton.icon(onPressed: () async {
         Navigator.of(context).pushReplacementNamed ('/Cinemas');
         }, 
-        child: Text('Voltar'),
+        icon: Icon(
+        Icons.arrow_back
+        ),
+        label: Text('Voltar'),
         color: Color.fromRGBO(223,128,33,1),),
-        
         Container(
           height: 20,
         ),
@@ -31,7 +33,7 @@ class _Filmes1State extends State<Filmes1> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   RaisedButton(onPressed: () async {
-                  Navigator.of(context).pushReplacementNamed ('/home');
+                  Navigator.of(context).pushReplacementNamed ('/Filmesin');
                 }, 
                   child: Image.asset('assets/imgs/aranha.png', width: 100, height: 200,),
                   color: Color.fromARGB(42, 255, 255, 255),

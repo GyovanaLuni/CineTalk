@@ -53,11 +53,15 @@ class _PrincipalState extends State<Principal> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  RaisedButton(onPressed: () async {
-                  Navigator.of(context).pushReplacementNamed ('/Cinemas');
-                }, 
-                  child: Text("Compre seu ingresso"),
-                  color: Color.fromRGBO(223,128,33,1),),   
+                  RaisedButton.icon(onPressed: () async {
+                    Navigator.of(context).pushReplacementNamed ('/Cinemas');
+                  }, 
+                    icon: Icon(
+                      Icons.theaters
+                  ),
+                    label: Text('Compre seu ingresso'),
+                    color: Color.fromRGBO(223,128,33,1),),
+   
                 ],
               )
             ],

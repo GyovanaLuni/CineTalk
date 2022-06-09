@@ -1,7 +1,10 @@
 import 'package:cinetalk/Cinemas.dart';
+import 'package:cinetalk/Horarios.dart';
 import 'package:cinetalk/cadeiras.dart';
 import 'package:cinetalk/controlador.dart';
 import 'package:cinetalk/filmes.dart';
+import 'package:cinetalk/filmes.dart';
+import 'package:cinetalk/filmesin.dart';
 import 'package:cinetalk/login.dart';
 import 'package:cinetalk/pagamento.dart';
 import 'package:cinetalk/teste.dart';
@@ -14,11 +17,6 @@ class AppW extends StatelessWidget{
   @override
   Widget build(BuildContext context) {  
     
-    FirebaseFirestore.instance.collection('Crud').get().then((value) {
-      value.docs.forEach((element) {
-        print(element.data);
-      });
-    });
     
     return AnimatedBuilder(
       animation: controller.instance,
@@ -34,8 +32,9 @@ class AppW extends StatelessWidget{
           '/Filmes':(context) => Filmes1(),
           '/Principal':(context) => Principal(),
           '/Cinemas':(context) => Cinemas1(),
+          '/Horarios':(context) => Horarios(),
           '/Cadeiras':(context) => Cadeiras1(),
-          '/Filmesin':(context) => Filmes1(),
+          '/Filmesin':(context) => Filmesin1()
         }
       );    
       },
