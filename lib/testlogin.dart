@@ -21,8 +21,4 @@ class TestLogin extends StatelessWidget {
           }),
     );
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 59d33af292d659f61e38a526ac430b3eda6eb4d3
