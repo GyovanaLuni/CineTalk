@@ -60,8 +60,16 @@ class _PrincipalState extends State<Principal> {
                       Icons.theaters
                   ),
                     label: Text('Compre seu ingresso'),
+                    color: Color.fromRGBO(223,128,33,1),
+                    ),
+                    RaisedButton.icon(onPressed: () async {
+                    Navigator.of(context).pushReplacementNamed ('/Chats');
+                  }, 
+                    icon: Icon(
+                      Icons.theaters
+                  ),
+                    label: Text('Chat'),
                     color: Color.fromRGBO(223,128,33,1),),
-   
                 ],
               )
             ],
