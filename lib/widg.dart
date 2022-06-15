@@ -8,6 +8,7 @@ import 'package:cinetalk/filmesin.dart';
 import 'package:cinetalk/login.dart';
 import 'package:cinetalk/pagamento.dart';
 import 'package:cinetalk/teste.dart';
+import 'package:cinetalk/testlogin.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'home_page.dart';
@@ -27,6 +28,7 @@ class AppW extends StatelessWidget{
         initialRoute: '/',
         routes: { 
           '/': (context) => login(),
+          '/testlogin':(context) => TestLogin(),
           '/home': (context) => HomePage(),
           '/pagamento':(context) => Pagamento(),
           '/Filmes':(context) => Filmes1(),

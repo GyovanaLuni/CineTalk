@@ -10,8 +10,6 @@ main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(
-    AppW(
-      
-    ));
+    AppW());
   
 }
