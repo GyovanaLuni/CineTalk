@@ -36,7 +36,7 @@ function acessar(){
         ).then(response => {
             window.location.href = "home.html";
         }).catch(error =>{
-            console.log('error',error)});
+            alert("Login Invalido!")});
 }
 
 
