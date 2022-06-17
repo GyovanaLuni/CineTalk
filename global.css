@@ -3,6 +3,13 @@
     padding: 0;
   }
   
+header{
+    text-align: right;
+}
+
+header button {
+    width: auto;
+}
 
   .left h3{
     color: #fff;
