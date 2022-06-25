@@ -1,7 +1,7 @@
 import 'package:cinetalk/Cinemas.dart';
 import 'package:cinetalk/Horarios.dart';
 import 'package:cinetalk/cadeiras.dart';
-import 'package:cinetalk/chat.dart';
+import 'package:cinetalk/Chat/chat.dart';
 import 'package:cinetalk/controlador.dart';
 import 'package:cinetalk/filmes.dart';
 import 'package:cinetalk/filmes.dart';

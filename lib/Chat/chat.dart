@@ -2,7 +2,7 @@ import 'dart:ffi';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cinetalk/services/Chat_class.dart';
-import 'package:cinetalk/telaMensagem.dart';
+import 'package:cinetalk/Chat/telaMensagem.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

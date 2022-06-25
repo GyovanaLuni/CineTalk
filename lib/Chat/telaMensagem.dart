@@ -1,4 +1,4 @@
-import 'package:cinetalk/bodyMensagem.dart';
+import 'package:cinetalk/Chat/bodyMensagem.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
