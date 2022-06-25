@@ -25,7 +25,14 @@ class _PrincipalState extends State<Principal> {
 
     ];
   Widget _body(){
-    return Column(
+    return SingleChildScrollView(
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Padding(
+          padding: const EdgeInsets.all(2.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           height: 50,
@@ -62,14 +69,6 @@ class _PrincipalState extends State<Principal> {
                     label: Text('Compre seu ingresso'),
                     color: Color.fromRGBO(223,128,33,1),
                     ),
-                    RaisedButton.icon(onPressed: () async {
-                    Navigator.of(context).pushReplacementNamed ('/Chats');
-                  }, 
-                    icon: Icon(
-                      Icons.theaters
-                  ),
-                    label: Text('Chat'),
-                    color: Color.fromRGBO(223,128,33,1),),
                 ],
               )
             ],
@@ -80,8 +79,6 @@ class _PrincipalState extends State<Principal> {
         ),
         Container(
         child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(5.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -106,55 +103,70 @@ class _PrincipalState extends State<Principal> {
                       )).toList(),
                     )
                   ),
-                )
+                ),
+              Divider( height: 10,),
+              Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center, //Center Row contents horizontally,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(padding: EdgeInsets.all(47)),
+                  Container(
+                    color: Color.fromRGBO(223,128,33,1),
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.center, //Center Row contents horizontally,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                
+                Expanded(child: IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed ('/Principal');
+                  },
+                  icon: Icon(Icons.home, size: 30, color: Color.fromARGB(255, 0, 32, 44),),
+                ),),
+                
+                Expanded(child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.favorite, size: 30,color: Color.fromARGB(255, 0, 32, 44)),
+                ),),
+                Expanded(child: IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed ('/Chats');
+                  },
+                  icon: Icon(Icons.message, size: 30,color: Color.fromARGB(255, 0, 32, 44)),
+                ),),
+                Expanded(child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.settings, size: 30,color: Color.fromARGB(255, 0, 32, 44)),
+                ),),
+                Expanded(child: IconButton(
+                  onPressed: () {},
+                  icon: CircleAvatar(backgroundImage: AssetImage("assets/imgs/gyo.jpg"),),
+                ),),
+              ]
+              ),
+            ),
+            ],
+          ),
+        ),            
               ]
             )
-          )
+
         )
         )
       ],
-    );
-
+    )
+            ),
+        ),
+      );
+  
   }
 
 
 
   @override
   Widget build(BuildContext context) {
-
-    final telas = [
-      HomePage(),
-      Cadeiras1(),
-      Filmesin1(),
-      HomePage(),
-      HomePage(),
-    ];
-
-    final items = <Widget>[
-      Icon(Icons.home, size: 30,),
-      Icon(Icons.search, size: 30,),
-      Icon(Icons.favorite, size: 30,),
-      Icon(Icons.person, size: 30,),
-      Icon(Icons.settings, size: 30,),
-    ];
-
-    return Scaffold(
-      
-      extendBody: true,    
-      bottomNavigationBar: Theme(
-        data: Theme.of(context).copyWith(
-          iconTheme: IconThemeData(color:Color.fromARGB(255, 0, 32, 44),),
-        ),
-        child:CurvedNavigationBar(   
-          color: Color.fromRGBO(223,128,33,1),
-          backgroundColor: Color.fromARGB(0, 255, 0, 0),
-          height: 60,
-          index: index,
-          items: items,
-          onTap: (index) => setState(() => this.index = index),
-        ),
-        ),
-      
+    return Scaffold( 
       body: Stack(
         children: [
           Container(  
@@ -170,6 +182,7 @@ class _PrincipalState extends State<Principal> {
           ), 
         ),
           _body(),
+
         ],
       )
     );

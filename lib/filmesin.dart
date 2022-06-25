@@ -19,10 +19,13 @@ class _Filmesin1State extends State<Filmesin1> {
         children: [
         Divider(height: 20,),
         Container(
-          height: 300,
-          width: 300,
+        height: MediaQuery.of(context).size.height * 0.65,
+        width: MediaQuery.of(context).size.width * 8,
         child: Image.network('https://firebasestorage.googleapis.com/v0/b/cinetalk1-1a731.appspot.com/o/aranha.png?alt=media&token=2a230b4a-7683-4193-b2a3-fb724d21b7b6')
         ),
+
+
+
         Divider(
           height: 1,
         ),

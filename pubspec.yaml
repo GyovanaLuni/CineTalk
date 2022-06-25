@@ -74,6 +74,9 @@ flutter:
     - assets/imgs/shang.png
     - assets/imgs/red.png
     - assets/imgs/encan.png
+    - assets/imgs/user.png
+    - assets/imgs/gears.png
+    - assets/imgs/heart.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
