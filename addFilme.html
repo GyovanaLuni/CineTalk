@@ -41,7 +41,7 @@
     <!--Fim Menu-->
 
     <!--página-->
-    
+
     <!--Area para adicionar filmes-->
     <main class="centralize">
         <form>
@@ -53,6 +53,11 @@
             <div class="form-field">
                 <div><label>Título</label></div>
                 <input type="text" id="titulo">
+            </div>
+            
+            <div class="form-field">
+                <div><label>url</label></div>
+                <input type="text" id="url">
             </div>
 
             <div class="form-field">
@@ -78,9 +83,11 @@
 <link rel="stylesheet" href="addFilme.css">
 
 
+
 <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-storage-compat.js"></script>
 <script src="firebase-init.js"></script>
 <script src='auth-guard.js'></script>
 <script src="addFilme.js"></script>

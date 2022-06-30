@@ -19,6 +19,15 @@ ol li:hover{
 
 }
 
+ol li:hover button.danger{
+    display: block;
+}
+
+button.danger{
+    width: auto;
+    float: right;
+    display: none;
+}
 
 p{
     margin: 4px 0;
