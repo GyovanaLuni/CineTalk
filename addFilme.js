@@ -5,7 +5,7 @@ function saveFilme() {
         .collection('filmes_teste')
         .add(filme)
         .then(() => {
-            window.location.href = "painelDeControle.html";
+            window.location.href = "filmes.html";
         })
         .catch(() => {
             alert("Error ao salvar o filme")
