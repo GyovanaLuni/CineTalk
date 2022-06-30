@@ -126,7 +126,9 @@ class _PrincipalState extends State<Principal> {
                 ),),
                 
                 Expanded(child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed ('/telamatch');
+                  },
                   icon: Icon(Icons.favorite, size: 30,color: Color.fromARGB(255, 0, 32, 44)),
                 ),),
                 Expanded(child: IconButton(
@@ -140,7 +142,9 @@ class _PrincipalState extends State<Principal> {
                   icon: Icon(Icons.settings, size: 30,color: Color.fromARGB(255, 0, 32, 44)),
                 ),),
                 Expanded(child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed ('/telaperfil');
+                  },
                   icon: CircleAvatar(backgroundImage: AssetImage("assets/imgs/gyo.jpg"),),
                 ),),
               ]

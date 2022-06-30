@@ -17,17 +17,16 @@ class _Cinemas1State extends State<Cinemas1> {
         Container(
           height: 30,
         ),
-        RaisedButton.icon(onPressed: () async {
-        Navigator.of(context).pushReplacementNamed ('/Principal');
-        }, 
-        icon: Icon(
-        Icons.arrow_back
+        Row(
+          children: [
+          IconButton(
+          icon: Icon(Icons.arrow_back, color: Color.fromRGBO(223, 128, 33, 1), size: 30,),
+          iconSize: 48,
+          onPressed: () {
+            Navigator.of(context).pushReplacementNamed ('/Principal');
+          },
         ),
-        label: Text('Voltar'),
-        color: Color.fromRGBO(223,128,33,1),),
-        Container(
-          height: 45,
-        ),
+        ],),
         Container(
             width: 340.0,
             child: TextField(     
@@ -43,67 +42,58 @@ class _Cinemas1State extends State<Cinemas1> {
               )
             )
         ),
-
         Container(
-          height: 30,
+          height: 40,
         ),        
         Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                width: 30,
-              ),
-              RaisedButton(onPressed: () async {
-              Navigator.of(context).pushReplacementNamed ('/Filmes');
-              }, 
-              child: Image.asset('assets/imgs/Tacaruna.jpg', width: 70, height: 170,),
-            ),  
-            Container(
-              width: 10,
-            ),
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+          Container(
+          child: InkWell(
+          onTap: () {
+            Navigator.of(context).pushReplacementNamed ('/Filmes');
+          },
+          child: Image.asset('assets/imgs/RioMar.jpg', width: 200, height: 100,fit: BoxFit.cover,),
+          ),
+         ),
+            Text("Rio Mar",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20))
+        ],
+      ),
+      Divider(height: 50,),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Container(
+          child: InkWell(
+          onTap: () {
+            Navigator.of(context).pushReplacementNamed ('/Filmes');
+          },
+          child: Image.asset('assets/imgs/Tacaruna.jpg', width: 200, height: 100, fit: BoxFit.cover,),
+          ),
+          ),
             Text("Tacaruna",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20))
           ],
-        ),
-        Container(height: 10),
-        Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                width: 30,
-              ),
-              RaisedButton(onPressed: () async {
-              Navigator.of(context).pushReplacementNamed ('/Filmes');
-              }, 
-              child: Image.asset('assets/imgs/RioMar.jpg', width: 70, height: 170,),
-            ),  
-            Container(
-              width: 10,
-            ),
-            Text("RioMar",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20))
-          ],
-        ),
-        Container(height: 10),
-        Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                width: 30,
-              ),
-              RaisedButton(onPressed: () async {
-              Navigator.of(context).pushReplacementNamed ('/Filmes');
-              }, 
-              child: Image.asset('assets/imgs/Nw.jpg', width: 70, height: 170,),
-            ),  
-            Container(
-              width: 10,
-            ),
+         ),
+        Divider(height: 50,),
+          Row(
+         mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+          Container(
+          child: InkWell(
+          onTap: () {
+            Navigator.of(context).pushReplacementNamed ('/Filmes');
+          },
+          child: Image.asset('assets/imgs/Nw.jpg', width: 200, height: 100, fit: BoxFit.cover,),
+          ),
+          ),
+
             Text("North Way",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20))
           ],
-        ),
+        )
       ],
-      ),
-    );
-  }
+    )
+  );
+}
 
 
   @override

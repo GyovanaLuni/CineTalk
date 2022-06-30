@@ -18,14 +18,16 @@ class _Filmes1State extends State<Filmes1> {
               Container(
           height: 30,
         ),
-        RaisedButton.icon(onPressed: () async {
-        Navigator.of(context).pushReplacementNamed ('/Cinemas');
-        }, 
-        icon: Icon(
-        Icons.arrow_back
+        Row(
+          children: [
+          IconButton(
+          icon: Icon(Icons.arrow_back, color: Color.fromRGBO(223, 128, 33, 1), size: 30,),
+          iconSize: 48,
+          onPressed: () {
+            Navigator.of(context).pushReplacementNamed ('/Cinemas');
+          },
         ),
-        label: Text('Voltar'),
-        color: Color.fromRGBO(223,128,33,1),),
+        ],),
         Container(
           height: 20,
         ),

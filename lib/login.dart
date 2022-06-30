@@ -5,6 +5,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import 'Cadastro/cadastro.dart';
+
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
 
@@ -56,37 +58,54 @@ class _loginState extends State<login> {
                   width: 200,
                   height: 300,
                   child: Image.asset('assets/imgs/pipoca.png')),
-              Container(height: 20),
-              TextField(
-                controller: _emailController,
-                onChanged: (text) {
-                  email = text;
-                },
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color.fromARGB(255, 255, 255, 255),
-                    labelText: "Email",
-                    border: OutlineInputBorder()),
-              ),
               Container(
+                child: 
+                Padding(padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: Column( 
+                  children: [
+                    TextField(
+                      controller: _emailController,
+                      onChanged: (text) {
+                        email = text;
+                      },
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Color.fromARGB(255, 255, 255, 255),
+                          labelText: "Email",
+                          enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(width: 1, color: Colors.white),
+                        borderRadius: BorderRadius.circular(15),
+                   ),                 
+                 ),
+                ),
+                Divider(
+                  height: 20,
+                ),
+                  TextField(
+                    controller: _passwordController,
+                    onChanged: (text1) {
+                      senha = text1;
+                    },
+                    obscureText: true,
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color.fromARGB(255, 255, 255, 255),
+                        labelText: "Senha",
+                        enabledBorder: OutlineInputBorder(
+                      borderSide: const BorderSide(width: 1, color: Colors.white),
+                      borderRadius: BorderRadius.circular(15),
+                   ),                 
+                 ),
+                ),
+              ],
+            ),
+          ),
+        ),
+              Divider(
                 height: 10,
-              ),
-              TextField(
-                controller: _passwordController,
-                onChanged: (text1) {
-                  senha = text1;
-                },
-                obscureText: true,
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color.fromARGB(255, 255, 255, 255),
-                    labelText: "Senha",
-                    border: OutlineInputBorder()),
-              ),
-              Container(
-                height: 20,
-              ),
+              ),     
               RaisedButton(
                 onPressed: () {
                   signIn();
@@ -97,15 +116,19 @@ class _loginState extends State<login> {
               Container(
                 height: 20,
               ),
+              Container(child: row),
+               Container(
+                height: 20,
+              ),
+              
               RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed ('/cadastro');
+                },
                 child: Text("Cadastro"),
                 color: Color.fromRGBO(223, 128, 33, 1),
               ),
-              Container(
-                height: 30,
-              ),
-              Container(child: row)
+             
             ],
           ),
         ),

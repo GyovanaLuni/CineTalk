@@ -1,3 +1,4 @@
+import 'package:cinetalk/Cadastro/cadastro.dart';
 import 'package:cinetalk/Cinemas.dart';
 import 'package:cinetalk/Horarios.dart';
 import 'package:cinetalk/cadeiras.dart';
@@ -7,7 +8,9 @@ import 'package:cinetalk/filmes.dart';
 import 'package:cinetalk/filmes.dart';
 import 'package:cinetalk/filmesin.dart';
 import 'package:cinetalk/login.dart';
+import 'package:cinetalk/match/tela_match.dart';
 import 'package:cinetalk/pagamento.dart';
+import 'package:cinetalk/perfil/perfil.dart';
 import 'package:cinetalk/teste.dart';
 import 'package:cinetalk/testlogin.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +32,10 @@ class AppW extends StatelessWidget{
         initialRoute: '/',
         routes: { 
           '/': (context) => login(),
+          '/telamatch':(context)  => TelaMatch(),
           '/testlogin':(context) => TestLogin(),
+          '/cadastro':(context) => Cadastro(),
+          '/telaperfil':(context)  => TelaPerfil(),
           '/home': (context) => HomePage(),
           '/Chats': (context) => Chats(),
           '/pagamento':(context) => Pagamento(),
