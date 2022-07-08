@@ -8,9 +8,11 @@ import 'package:cinetalk/filmes.dart';
 import 'package:cinetalk/filmes.dart';
 import 'package:cinetalk/filmesin.dart';
 import 'package:cinetalk/login.dart';
+import 'package:cinetalk/match/match_sala.dart';
 import 'package:cinetalk/match/tela_match.dart';
 import 'package:cinetalk/pagamento.dart';
 import 'package:cinetalk/perfil/perfil.dart';
+import 'package:cinetalk/telaPagamento.dart';
 import 'package:cinetalk/teste.dart';
 import 'package:cinetalk/testlogin.dart';
 import 'package:flutter/material.dart';
@@ -32,6 +34,7 @@ class AppW extends StatelessWidget{
         initialRoute: '/',
         routes: { 
           '/': (context) => login(),
+          '/matchSala':(context) => MatchSala(),
           '/telamatch':(context)  => TelaMatch(),
           '/testlogin':(context) => TestLogin(),
           '/cadastro':(context) => Cadastro(),
@@ -44,6 +47,7 @@ class AppW extends StatelessWidget{
           '/Cinemas':(context) => Cinemas1(),
           '/Horarios':(context) => Horarios(),
           '/Cadeiras':(context) => Cadeiras1(),
+          '/telaPagamento': (context) => TelaPagamento(),
           '/Filmesin':(context) => Filmesin1()
         }
       );    

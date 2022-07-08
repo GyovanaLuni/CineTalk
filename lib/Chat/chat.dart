@@ -23,12 +23,16 @@ class _ChatsState extends State<Chats> {
         Container(
           height: 20,
         ),
-           RaisedButton(onPressed: () async {
-                  Navigator.of(context).pushReplacementNamed ('/Principal');
-                }, 
-                child: Text("Filmes"),
-                color: Color.fromRGBO(223,128,33,1),
-        ), 
+        Row(
+          children: [
+            IconButton(
+            icon: Icon(Icons.arrow_back, color: Color.fromRGBO(223, 128, 33, 1), size: 30,),
+            iconSize: 48,
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed ('/Principal');
+            },
+          ),
+        ],),
         Expanded(
           child: ListView.builder(
             itemCount: chatsData.length,
@@ -44,7 +48,6 @@ class _ChatsState extends State<Chats> {
    @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: builderAppBar(),
       body: Stack(
         children: [
           Container(  
@@ -68,15 +71,3 @@ class _ChatsState extends State<Chats> {
 
 
 
-AppBar builderAppBar(){
-  return AppBar(
-    backgroundColor: Color.fromRGBO(223,128,33,1),
-    title: Text("Chat"),
-    actions: [
-      IconButton(
-        icon: Icon(Icons.search),
-        onPressed: () {}, 
-      )
-    ],
-  );
-}

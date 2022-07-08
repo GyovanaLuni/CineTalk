@@ -24,27 +24,123 @@ class _HorariosState extends State<Horarios> {
       children: [
         Divider(height: 30),
 
-        RaisedButton.icon(onPressed: () async {
-          Navigator.of(context).pushReplacementNamed ('/Filmesin');
-          }, 
-          icon: Icon(
-          Icons.arrow_back
+        Row(
+          children: [
+          IconButton(
+          icon: Icon(Icons.arrow_back, color: Color.fromRGBO(223, 128, 33, 1), size: 30,),
+          iconSize: 48,
+          onPressed: () {
+            Navigator.of(context).pushReplacementNamed ('/Filmes');
+           },
           ),
-          label: Text('Voltar'),
-          color: Color.fromRGBO(223,128,33,1),),
-// calendar_month 
+         ],
+        ),
+            
+            Divider(height: 110),
             Container(
-              child: MaterialButton(
-                onPressed: _showDataPicker,
-                child: const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text('data',style: TextStyle( color: Colors.black, ),),
-                ),
-                color: Color.fromRGBO(223,128,33,1),
-              ),
+              child: Text('Sala 1', style: TextStyle(color: Colors.white, fontSize: 20)),
             ),
+            Container(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                RaisedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed ('/Cadeiras');
+                },
+                child: Text("13:30"),
+                color: Color.fromRGBO(223, 128, 33, 1),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed ('');
+                },
+                child: Text("15:45"),
+                color: Color.fromRGBO(223, 128, 33, 1),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed ('');
+                },
+                child: Text("17:20"),
+                color: Color.fromRGBO(223, 128, 33, 1),
+              ),
+              ],
+            ),
+            Divider(height: 40),
+            Container(
+              child: Text('Sala 2', style: TextStyle(color: Colors.white, fontSize: 20)),
+            ),
+            Container(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                RaisedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed ('');
+                },
+                child: Text("14:10"),
+                color: Color.fromRGBO(223, 128, 33, 1),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed ('');
+                },
+                child: Text("16:00"),
+                color: Color.fromRGBO(223, 128, 33, 1),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed ('');
+                },
+                child: Text("17:50"),
+                color: Color.fromRGBO(223, 128, 33, 1),
+              ),
+              ],
+            ),
+            Divider(height: 40),
+            Container(
+              child: Text('Sala 3', style: TextStyle(color: Colors.white, fontSize: 20)),
+            ),
+            Container(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                RaisedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed ('');
+                },
+                child: Text("15:00"),
+                color: Color.fromRGBO(223, 128, 33, 1),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed ('');
+                },
+                child: Text("18:30"),
+                color: Color.fromRGBO(223, 128, 33, 1),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed ('');
+                },
+                child: Text("22:00"),
+                color: Color.fromRGBO(223, 128, 33, 1),
+              ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                
           ],
-        );
+        )
+      ],
+    );
   }
    @override
   Widget build(BuildContext context) {

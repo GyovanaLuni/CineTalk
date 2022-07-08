@@ -26,25 +26,29 @@ class _Filmes1State extends State<Filmes1> {
           onPressed: () {
             Navigator.of(context).pushReplacementNamed ('/Cinemas');
           },
-        ),
-        ],),
-        Container(
-          height: 20,
-        ),
+          ),
+          ],),
+          Container(
+            height: 20,
+          ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  RaisedButton(onPressed: () async {
-                  Navigator.of(context).pushReplacementNamed ('/Filmesin');
-                }, 
-                  child: Image.asset('assets/imgs/aranha.png', width: 100, height: 200,),
-                  color: Color.fromARGB(42, 255, 255, 255),
-                  ),  
-                  RaisedButton(onPressed: () async {
-                  Navigator.of(context).pushReplacementNamed ('/home');
-                }, 
-                  child: Image.asset('assets/imgs/matrix.png', width: 100, height: 200,),
-                  color: Color.fromARGB(42, 255, 255, 255),
+                  Container(
+                    child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushReplacementNamed ('/Filmesin');
+                    },
+                    child: Image.asset('assets/imgs/aranha.png', width: 150, height: 200),
+                    ),
+                  ),
+                 Container(
+                    child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushReplacementNamed ('/Filmesin');
+                    },
+                    child: Image.asset('assets/imgs/matrix.png', width: 150, height: 200),
+                    ),
                   ),
                 ],
               ),
@@ -54,17 +58,21 @@ class _Filmes1State extends State<Filmes1> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  RaisedButton(onPressed: () async {
-                  Navigator.of(context).pushReplacementNamed ('/home');
-                }, 
-                  child: Image.asset('assets/imgs/eternos.png', width: 100, height: 200,),
-                  color: Color.fromARGB(42, 255, 255, 255),
-                  ),  
-                  RaisedButton(onPressed: () async {
-                  Navigator.of(context).pushReplacementNamed ('/home');
-                }, 
-                  child: Image.asset('assets/imgs/red.png', width: 100, height: 200,),
-                  color: Color.fromARGB(42, 255, 255, 255),
+                  Container(
+                    child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushReplacementNamed ('/Filmesin');
+                    },
+                    child: Image.asset('assets/imgs/eternos.png', width: 150, height: 200),
+                    ),
+                  ),
+                  Container(
+                    child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushReplacementNamed ('/Filmesin');
+                    },
+                    child: Image.asset('assets/imgs/red.png', width: 150, height: 200),
+                    ),
                   ),
                 ],
               ),
@@ -74,19 +82,22 @@ class _Filmes1State extends State<Filmes1> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  RaisedButton(onPressed: () async {
-                  Navigator.of(context).pushReplacementNamed ('/home');
-                }, 
-                  child: Image.asset('assets/imgs/shang.png', width: 100, height: 200,),
-                  color: Color.fromARGB(42, 255, 255, 255),
-                  ),  
-                  RaisedButton(onPressed: () async {
-                  Navigator.of(context).pushReplacementNamed ('/home');
-                  
-                }, 
-                  child: Image.asset('assets/imgs/encan.png', width: 100, height: 200,),
-                  color: Color.fromARGB(42, 255, 255, 255),),
-                
+                  Container(
+                    child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushReplacementNamed ('/Filmesin');
+                    },
+                    child: Image.asset('assets/imgs/shang.png', width: 150, height: 200),
+                    ),
+                  ),
+                  Container(
+                    child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushReplacementNamed ('/Filmesin');
+                    },
+                    child: Image.asset('assets/imgs/encan.png', width: 150, height: 200),
+                    ),
+                  ),
                 ],
               ),
             ],

@@ -17,13 +17,13 @@ Widget _body(){
           padding: const EdgeInsets.all(1.0),
           child: Column(
             children: [
-             Column(
+             Stack(
                 children: [
                   Container(
                     width: 600,
-                    height: 270,
+                    height: 200,
                     decoration: BoxDecoration(
-                      boxShadow: [
+                    boxShadow: [
                     BoxShadow(
                       color: Color.fromARGB(58, 0, 0, 0),
                       offset: const Offset(
@@ -37,6 +37,8 @@ Widget _body(){
                       borderRadius: BorderRadius.circular(20),
                       color: Color.fromRGBO(223, 128, 33, 1),
                     ),
+                  ),
+                  Container(
                     child: Column(
                       children: [
                         Row(
@@ -47,35 +49,52 @@ Widget _body(){
                             onPressed: () {
                             Navigator.of(context).pushReplacementNamed ('/Principal');
                             },
-                          ),
-                      ],
-                  ),
-                  Container(
-                    width: 200,
-                    height: 200,
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/imgs/gyo.jpg')),
+                            ),
+                        ],
+                      ),
+                    Container(
+                      width: 200,
+                      height: 200,
+                        child: Stack(
+                          fit: StackFit.expand,
+                          overflow: Overflow.visible,
+                          children: [
+                            CircleAvatar(
+                              backgroundImage: AssetImage('assets/imgs/gyo.jpg')
+                            ),
+                            Positioned(
+                              right: -10,
+                              bottom: 0,
+                              child: SizedBox(
+                                height: 80,
+                                width: 80,
+                                child: IconButton(        
+                                  color: Color(0xFFF5F6F9),
+                                  onPressed: (){},
+                                  icon: Icon(Icons.camera_alt, color: Colors.white),
+                                ),
+                              ),
+                            )
+                          ],
                         ),
-                      ],
+                      ),
+                    ],
+                    ),
                   ),
-                ),
-                Divider(
-                  height: 20,
-                ),
                 Padding(
-                  padding: EdgeInsets.all(2.0),
+                  padding: EdgeInsets.only(top:300),
                   child: Text(
                     'Meu nome é Gyovana. Eu sou linda, inteligente, chata, mas também adoravel. Amo filmes',
                     style: TextStyle( color: Colors.white, fontSize: 17),
                   )
                   ),
               ],
-             ),
-      ],
-      ),
+            ),
+          ],
+        ),
+      )
     )
-  )
-);      
+  );      
 }
 
 

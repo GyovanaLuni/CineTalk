@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:readmore/readmore.dart';
@@ -9,9 +10,10 @@ class Filmesin1 extends StatefulWidget {
   _Filmesin1State createState() => _Filmesin1State();
 }
 
+
 class _Filmesin1State extends State<Filmesin1> {
+
   String content = 'Em Homem-Aranha: Sem Volta para Casa, Peter Parker (Tom Holland) precisará lidar com as consequências da sua identidade como o herói mais querido do mundo após ter sido revelada pela reportagem do Clarim Diário, com uma gravação feita por Mysterio (Jake Gyllenhaal) no filme anterior. Incapaz de separar sua vida normal das aventuras de ser um super-herói, além de ter sua reputação arruinada por acharem que foi ele quem matou Mysterio e pondo em risco seus entes mais queridos, Parker pede ao Doutor Estranho (Benedict Cumberbatch) para que todos esqueçam sua verdadeira identidade. Entretanto, o feitiço não sai como planejado e a situação torna-se ainda mais perigosa quando vilões de outras versões de Homem-Aranha de outro universos acabam indo para seu mundo. Agora, Peter não só deter vilões de suas outras versões e fazer com que eles voltem para seu universo original, mas também aprender que, com grandes poderes vem grandes responsabilidades como herói.';
-   
    
    Widget _body(){
     return SingleChildScrollView(
@@ -24,7 +26,7 @@ class _Filmesin1State extends State<Filmesin1> {
           icon: Icon(Icons.arrow_back, color: Color.fromRGBO(223, 128, 33, 1), size: 30,),
           iconSize: 48,
           onPressed: () {
-            Navigator.of(context).pushReplacementNamed ('/Cinemas');
+            Navigator.of(context).pushReplacementNamed ('/Filmes');
            },
           ),
          ],
