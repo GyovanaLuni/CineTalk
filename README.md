@@ -3,4 +3,5 @@ Repository dedicated to our Cinetalk project, a mobile application that aims to 
 (PT) Repositório dedicado ao nosso projeto Cinetalk, um aplicativo mobile que visa conectar pessoas com interesses em gêneros semelhantes de filmes e vontade de conhecer e discutir sobre seus universos cinematográficos favoritos.
 
 Trelo: https://trello.com/b/vTyOICCU/cinetalk
-site https://amazing-beignet-c7c2fb.netlify.app/home.html
+<br>
+site: https://calm-tarsier-577e47.netlify.app/
