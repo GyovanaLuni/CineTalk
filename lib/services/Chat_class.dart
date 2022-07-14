@@ -16,52 +16,30 @@ List chatsData = [
 
   Chat(
     name: "Luiz Felipe",
-    lastMessage: "Eu te amo tantoooo meu bebê",
+    lastMessage: "Aquela cena foi estranha",
     image: "assets/imgs/matrix.png",
     time: "23m ago",
     isActive: false,
   ),
     Chat(
-    name: "Matheus chato",
+    name: "Matheus",
     lastMessage: "chato",
     image: "assets/imgs/matrix.png",
     time: "1h ago",
     isActive: false,
   ),
     Chat(
-    name: "GyovanaTop<3",
-    lastMessage: "Eu moido",
+    name: "GyovanaTop",
+    lastMessage: "Você assitiu o filme?",
     image: "assets/imgs/gyo.jpg",
     time: "1m ago",
     isActive: false,
   ),
     Chat(
-    name: "Luiz Felipe",
-    lastMessage: "Eu te amo tantoooo meu bebê",
+    name: "Jose",
+    lastMessage: "concordo",
     image: "assets/imgs/matrix.png",
     time: "1pm",
     isActive: false,
   ),
-    Chat(
-    name: "Luiz Felipe",
-    lastMessage: "Eu te amo tantoooo meu bebê",
-    image: "assets/imgs/matrix.png",
-    time: "1pm",
-    isActive: false,
-  ),
-    Chat(
-    name: "Luiz Felipe",
-    lastMessage: "Eu te amo tantoooo meu bebê",
-    image: "assets/imgs/matrix.png",
-    time: "2m ago",
-    isActive: false,
-  ),
-    Chat(
-    name: "Luiz Felipe",
-    lastMessage: "Eu te amo tantoooo meu bebê",
-    image: "assets/imgs/matrix.png",
-    time: "3m ago",
-    isActive: false,
-  ),
-
 ];

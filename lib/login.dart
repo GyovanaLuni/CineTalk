@@ -6,6 +6,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'Cadastro/cadastro.dart';
+import 'filmesin.dart';
 
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
@@ -13,7 +14,24 @@ class login extends StatefulWidget {
   @override
   State<login> createState() => _loginState();
 }
+var getearly = Receiveinf();
 
+List nova(indexes) {
+  List gett = [];
+  var new2;
+  Stream<QuerySnapshot<Map<String, dynamic>>> cont =
+      FirebaseFirestore.instance.collection('filmes_teste').snapshots();
+  cont.listen((QuerySnapshot querySnapshot) {
+    querySnapshot.docs.forEach((doc) => gett.add(doc.data()));
+  });
+  new2 = cont;
+  return gett;
+}
+
+var test = nova('0');
+var lista = test[0];
+var sinp45 = lista['sinopse'];
+var title45 = lista['titulo'];
 class _loginState extends State<login> {
   static const _baseUrl =
       'https://console.firebase.google.com/u/3/project/cinetalk1-1a731/database/cinetalk1-1a731-default-rtdb/data/~2F';
@@ -34,7 +52,11 @@ class _loginState extends State<login> {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         RaisedButton(
-          onPressed: () {},
+          onPressed: () {
+            getearly.titulos1 = title45;
+            getearly.sinps1 = sinp45;
+            print(sinp45);
+          },
           child: Text('Google'),
           color: Color.fromARGB(255, 255, 255, 255),
         ),

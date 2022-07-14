@@ -42,12 +42,21 @@ Widget _body(){
                     child: Column(
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             IconButton(
                             icon: Icon(Icons.arrow_back, color: Color.fromARGB(255, 255, 255, 255), size: 30,),
                             iconSize: 48,
                             onPressed: () {
                             Navigator.of(context).pushReplacementNamed ('/Principal');
+                            },
+                            ),
+                             IconButton(
+                            icon: Icon(Icons.pending_outlined, color: Color.fromARGB(255, 255, 255, 255), size: 30,),
+                            iconSize: 48,
+                            onPressed: () {
+                            Navigator.of(context).pushReplacementNamed ('/editperfil');
                             },
                             ),
                         ],
@@ -62,27 +71,19 @@ Widget _body(){
                             CircleAvatar(
                               backgroundImage: AssetImage('assets/imgs/gyo.jpg')
                             ),
-                            Positioned(
-                              right: -10,
-                              bottom: 0,
-                              child: SizedBox(
-                                height: 80,
-                                width: 80,
-                                child: IconButton(        
-                                  color: Color(0xFFF5F6F9),
-                                  onPressed: (){},
-                                  icon: Icon(Icons.camera_alt, color: Colors.white),
-                                ),
-                              ),
-                            )
+                            
                           ],
                         ),
                       ),
                     ],
                     ),
                   ),
+                Container(
+                  
+                ),
                 Padding(
                   padding: EdgeInsets.only(top:300),
+                  
                   child: Text(
                     'Meu nome é Gyovana. Eu sou linda, inteligente, chata, mas também adoravel. Amo filmes',
                     style: TextStyle( color: Colors.white, fontSize: 17),

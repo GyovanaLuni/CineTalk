@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:cinetalk/login.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,11 +10,32 @@ class Filmesin1 extends StatefulWidget {
   @override
   _Filmesin1State createState() => _Filmesin1State();
 }
+class Receiveinf {
+  late String titulo;
+  late String sinopse;
+  late String duracao;
+  late String sala;
 
+  String get sinps {
+    return sinopse;
+  }
+  set sinps1(String snps) {
+      sinopse = snps;
+    }
+
+  set titulos1(String title) {
+    titulo = title;
+  }
+
+  String get titles {
+    return titulo;
+  }
+
+}
 
 class _Filmesin1State extends State<Filmesin1> {
 
-  String content = 'Em Homem-Aranha: Sem Volta para Casa, Peter Parker (Tom Holland) precisará lidar com as consequências da sua identidade como o herói mais querido do mundo após ter sido revelada pela reportagem do Clarim Diário, com uma gravação feita por Mysterio (Jake Gyllenhaal) no filme anterior. Incapaz de separar sua vida normal das aventuras de ser um super-herói, além de ter sua reputação arruinada por acharem que foi ele quem matou Mysterio e pondo em risco seus entes mais queridos, Parker pede ao Doutor Estranho (Benedict Cumberbatch) para que todos esqueçam sua verdadeira identidade. Entretanto, o feitiço não sai como planejado e a situação torna-se ainda mais perigosa quando vilões de outras versões de Homem-Aranha de outro universos acabam indo para seu mundo. Agora, Peter não só deter vilões de suas outras versões e fazer com que eles voltem para seu universo original, mas também aprender que, com grandes poderes vem grandes responsabilidades como herói.';
+  String content = getearly.sinps;
    
    Widget _body(){
     return SingleChildScrollView(
@@ -56,7 +78,7 @@ class _Filmesin1State extends State<Filmesin1> {
 
           Container(
           width: 300,  
-          child:Text('Spider-man No Way Home', style:TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  25) ),
+          child:Text(getearly.titles, style:TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  25) ),
           ),
           Divider(height: 10),
           Row(

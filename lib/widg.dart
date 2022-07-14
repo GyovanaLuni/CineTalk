@@ -11,6 +11,7 @@ import 'package:cinetalk/login.dart';
 import 'package:cinetalk/match/match_sala.dart';
 import 'package:cinetalk/match/tela_match.dart';
 import 'package:cinetalk/pagamento.dart';
+import 'package:cinetalk/perfil/editProfile.dart';
 import 'package:cinetalk/perfil/perfil.dart';
 import 'package:cinetalk/telaPagamento.dart';
 import 'package:cinetalk/teste.dart';
@@ -39,6 +40,7 @@ class AppW extends StatelessWidget{
           '/testlogin':(context) => TestLogin(),
           '/cadastro':(context) => Cadastro(),
           '/telaperfil':(context)  => TelaPerfil(),
+          '/editperfil':(context) => EditPerfil(), 
           '/home': (context) => HomePage(),
           '/Chats': (context) => Chats(),
           '/pagamento':(context) => Pagamento(),
