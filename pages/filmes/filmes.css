@@ -1,5 +1,6 @@
 body{
     height: 100vh;
+    background: #23232e;
 }
 
 ol{
@@ -12,6 +13,7 @@ ol li{
     background: white;
     padding: 8px 16px;
     border-bottom: 1px solid gray;
+    
 }
 
 ol li:hover{

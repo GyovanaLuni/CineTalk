@@ -1,6 +1,6 @@
 
 function newFilme(){
-    window.location.href = 'addFilme.html';
+    window.location.href = '../addFilme/addFilme.html';
 }
 
 
@@ -8,11 +8,13 @@ function newFilme(){
 findFilmes();
 
 function findFilmes(){
+    
     firebase.firestore()
         .collection('filmes_teste')
-        .orderBy('date', 'desc')
+        .orderBy('idx', 'desc')
         .get()
         .then(snapshot => {
+            
             const filmes = snapshot.docs.map(doc => ({
                 ...doc.data(),
                 uid: doc.id
@@ -22,8 +24,15 @@ function findFilmes(){
 
 }
 
+//verificar as salas já cadastradas
+var salaOcupada = []
+//salaOcupada.push(filme.sala);
+console.log(salaOcupada);
+//export default salaOcupada;
+
 function addFilme(filmes){
     const orderedList = document.getElementById('filmes')
+
 
     filmes.forEach(filme => {
         const li = document.createElement('li');
@@ -34,7 +43,7 @@ function addFilme(filmes){
 
         //Pegando o filme que foi clicado
         li.addEventListener('click', () => {
-           window.location.href = 'addFilme.html?uid=' + filme.uid; 
+           window.location.href = '../addFilme/addFilme.html?uid=' + filme.uid; 
         })
         
         //botão de remover filme
@@ -50,10 +59,17 @@ function addFilme(filmes){
 
 
 
-        //add data
-        const date = document.createElement('p');
-        date.innerHTML = (filme.date);
-        li.appendChild(date);
+        //add id
+        const idx = document.createElement('num');
+        idx.innerHTML = (filme.idx);
+        li.appendChild(idx);
+
+        //add sala
+        const sala = document.createElement('p');
+        sala.innerHTML = (filme.sala);
+        li.appendChild(sala);
+        
+        
 
 
         //add titulo
@@ -61,10 +77,10 @@ function addFilme(filmes){
         titulo.innerHTML = filme.titulo;
         li.appendChild(titulo);
 
-        //add url
-        const url = document.createElement('p');
-        url.innerHTML = filme.url;
-        li.appendChild(url);
+        //add image
+        const image = document.createElement('p');
+        image.innerHTML = filme.image;
+        li.appendChild(image);
 
         //add sinopse
         const sinopse = document.createElement('p');
@@ -107,6 +123,3 @@ function removeFilme(filme){
 }
 
 
-function formatDate(date) {
-    return new Date(date).toLocaleDateString('pt-br');
-}

@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -145,14 +149,71 @@ nav {
   .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
   }
-button{
-    cursor: pointer;
-}
-button[disabled] {
-    opacity: 0.7;
+
+.centralize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.outline.danger{
-  color: red;
-  border-color: red;
+.form-field {
+    margin-bottom: 10px;
 }
+
+input,
+button {
+   padding: 10px;
+   width: -webkit-fill-available;
+}
+
+input[type="radio"] {
+  width: auto;
+}
+
+
+.loading {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.loading label {
+    font-size: 24px;
+}
+
+button {
+    cursor: pointer;
+}
+button:active {
+    opacity: 0.8;
+}
+button[disabled] {
+    opacity: 0.8;
+}
+
+.clear {
+    background: transparent;
+    border: none;
+    color: white;
+}
+.solid {
+    background: white;
+    border: none;
+    color: rgb(45, 211, 111);
+}
+.outline {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.error {
+    background: red;
+    color: white;
+    display: none;
+} 
+
+.outline.danger{
+    color: red;
+    border-color: red;
+  }
