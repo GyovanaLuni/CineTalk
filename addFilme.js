@@ -2,7 +2,7 @@ if(!isNewFilme()){
     const uid = getFilmeUid();
     findFilmeByUid(uid);
 }
-
+//teste
 
 function getFilmeUid(){
     const urlParams = new URLSearchParams(window.location.search);
