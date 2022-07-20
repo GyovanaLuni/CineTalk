@@ -4,4 +4,4 @@ Repository dedicated to our Cinetalk project, a mobile application that aims to 
 
 Trelo: https://trello.com/b/vTyOICCU/cinetalk
 <br>
-site: https://calm-tarsier-577e47.netlify.app/
+site: https://effulgent-kringle-eb1cf2.netlify.app/
