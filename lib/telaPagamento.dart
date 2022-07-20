@@ -62,7 +62,6 @@ class _TelaPagamentoState extends State<TelaPagamento> {
                               ),
                             ),
                           ),
-
                   Divider(
                     height: 20,
                   ),

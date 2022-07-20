@@ -26,28 +26,91 @@ Widget _body(){
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(1.0),
           child: Column(
             children: [
-              Container(
-                height: 10,
-              ),
-              Row(
+             Stack(
                 children: [
-                IconButton(
-                icon: Icon(Icons.arrow_back, color: Color.fromRGBO(223, 128, 33, 1), size: 30,),
-                iconSize: 48,
-                onPressed: () {
-                Navigator.of(context).pushReplacementNamed ('/telamatch');
-                },
-              ),
-            ],
-          ),
-      ]
+                  Container(
+                    width: 600,
+                    height: 200,
+                    decoration: BoxDecoration(
+                    boxShadow: [
+                    BoxShadow(
+                      color: Color.fromARGB(58, 0, 0, 0),
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 10.0,
+                      spreadRadius: 2.0,
+                    )
+                    ],
+                      borderRadius: BorderRadius.circular(20),
+                      color: Color.fromRGBO(223, 128, 33, 1),
+                    ),
+                  ),
+                  Container(
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            IconButton(
+                            icon: Icon(Icons.arrow_back, color: Color.fromARGB(255, 255, 255, 255), size: 30,),
+                            iconSize: 48,
+                            onPressed: () {
+                            Navigator.of(context).pushReplacementNamed ('/telamatch');
+                            },
+                            )
+                        ],
+                      ),
+                    Container(
+                      width: 200,
+                      height: 200,
+                        child: Stack(
+                          fit: StackFit.expand,
+                          overflow: Overflow.visible,
+                          children: [
+                            CircleAvatar(
+                              backgroundImage: AssetImage('assets/imgs/aranha.png')
+                            ),
+                            
+                          ],
+                        ),
+                      ),
+                    ],
+                    ),
+                  ),
+                Padding(
+                  padding: EdgeInsets.only(top:270),
+                  child: Column(
+                    children: [
+                      Container(
+                      child: Text(
+                          'Peter',
+                           style: TextStyle( color: Colors.white, fontSize: 30),
+                      )
+                      ),
+                      Divider( height: 20),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Container(
+                          child: Text(
+                            'Oi, eu sou Peter Paker. Eu sou atletico, inteligente e alguns até me chamam de herói, kk. Amo filmes de super heróis',
+                            style: TextStyle( color: Colors.white, fontSize: 16),
+                          )
+                        ),
+                      ),                      
+                    ],
+                  ),
+                  ),
+              ],
+            ),
+          ],
+        ),
+      )
     )
-  )   
-)
-);
+  );      
 }
 
 
@@ -56,6 +119,12 @@ Widget _body(){
 @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Color.fromRGBO(223, 128, 33, 1),
+        child: Icon(Icons.favorite, color: Color.fromARGB(255, 0, 33, 79)),
+        onPressed: () { 
+          Navigator.of(context).pushReplacementNamed ('/telamatch');
+         },),
       body: Stack(
         children: [
           Container(  

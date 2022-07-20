@@ -10,13 +10,14 @@ class Filmes1 extends StatefulWidget {
 class _Filmes1State extends State<Filmes1> {
 
   Widget _body(){
-    return Column(
-      children: <Widget>[
-        GestureDetector(
-          child: Column(
-            children: [
-              Container(
-          height: 30,
+   return SingleChildScrollView(
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: ListView(
+        children: [
+          Container(
+        height: 30,
         ),
         Row(
           children: [
@@ -103,7 +104,6 @@ class _Filmes1State extends State<Filmes1> {
             ],
           ),
         )
-      ],
     );
   }
 

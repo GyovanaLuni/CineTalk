@@ -31,26 +31,25 @@ class _PrincipalState extends State<Principal> {
         height: MediaQuery.of(context).size.height,
         child: Padding(
           padding: const EdgeInsets.all(2.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          height: 50,
-        ),
-        Container(
-          child: Column(children: [
-            Row(
-              children: [
-                Container(
-                  width: 30,
-                ),
-                Container(
-                  child:Text('Olá, <Pessoa!>', style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20)),
-                )
-              ],
-            )
-          ],)  
-        ),     
+          child: ListView(
+            children: [
+              Container(
+                height: 50,
+              ),
+              Container(
+                child: Column(children: [
+                  Row(
+                    children: [
+                      Container(
+                        width: 30,
+                      ),
+                      Container(
+                        child:Text('Olá, <Pessoa!>', style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20)),
+                      )
+                    ],
+                  )
+                ],)  
+              ),     
         Container(
           height: 5,
         ),
@@ -110,7 +109,7 @@ class _PrincipalState extends State<Principal> {
                 mainAxisAlignment: MainAxisAlignment.center, //Center Row contents horizontally,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Padding(padding: EdgeInsets.all(47)),
+                  Padding(padding: EdgeInsets.all(38)),
                   Container(
                     color: Color.fromRGBO(223,128,33,1),
                 child: Row(
@@ -153,18 +152,16 @@ class _PrincipalState extends State<Principal> {
             ],
           ),
         ),            
-              ]
-            )
-
-        )
-        )
-      ],
+       ]
+      )
     )
-            ),
-        ),
-      );
-  
-  }
+  )
+],
+)
+),
+),
+);
+}
 
 
 

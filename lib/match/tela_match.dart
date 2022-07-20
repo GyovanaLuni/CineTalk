@@ -33,57 +33,102 @@ Widget _body(){
       child: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
+
+        child: ListView(
+        children: [
+          Container(
+        height: 30,
+        ),
+        Row(
+          children: [
+          IconButton(
+          icon: Icon(Icons.arrow_back, color: Color.fromRGBO(223, 128, 33, 1), size: 30,),
+          iconSize: 48,
+          onPressed: () {
+            Navigator.of(context).pushReplacementNamed ('/Principal');
+          },
+          ),
+          ],),
+          Container(
+            height: 20,
+          ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Container(
+                      child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushReplacementNamed ('/matchSala');
+                      },
+                      child: Image.asset('assets/imgs/aranha.png', width: 150, height: 200),
+                      ),
+                    ),
+                  ),
+                   Text("Peter",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20))
+                ],
+              ),
               Container(
-                height: 10,
+                height: 20,
               ),
               Row(
                 children: [
-                IconButton(
-                icon: Icon(Icons.arrow_back, color: Color.fromRGBO(223, 128, 33, 1), size: 30,),
-                iconSize: 48,
-                onPressed: () {
-                Navigator.of(context).pushReplacementNamed ('/Principal');
-                },
-               ),
-             ],
-            ),
-          
-           Padding(
-             padding: const EdgeInsets.only(top: 200),
-             child: Stack(
-              children: [
-                Container(
-                  child: InkWell(
-                  onTap: () {
-                    Navigator.of(context).pushReplacementNamed ('/matchSala');
-                  },
-                  child: CarouselSlider.builder(
-                    carouselController: carouselController,
-                    options: CarouselOptions(
-                      height: 400,
-                      autoPlay: true,
-                      enlargeCenterPage: true,
-                      enlargeStrategy: CenterPageEnlargeStrategy.height),
-                      itemCount: imageListMach.length,
-                      itemBuilder: (context, index, realIndex) {
-                        final Images= imageListMach [index];
-                        return buildImage(Images, index);
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Container(
+                      child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushReplacementNamed ('/matchSala');
                       },
+                      child: Image.asset('assets/imgs/aranha.png', width: 150, height: 200),
+                      ),
+                    ),
                   ),
-                ),
-              )
-            ],       
+                   Text("Nome",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20))
+                ],
+              ),
+              Container(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Container(
+                      child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushReplacementNamed ('/matchSala');
+                      },
+                      child: Image.asset('assets/imgs/shang.png', width: 150, height: 200),
+                      ),
+                    ),
+                  ),  
+                   Text("Nome",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20))          
+                ],
+              ),
+              Container(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Container(
+                      child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushReplacementNamed ('/matchSala');
+                      },
+                      child: Image.asset('assets/imgs/shang.png', width: 150, height: 200),
+                      ),
+                    ),
+                  ),  
+                   Text("Nome",style: TextStyle(color:Color.fromARGB(255, 255, 255, 255), fontSize:  20))          
+                ],
+              ),
+            ],
           ),
         )
-      ]
-    )
-  )   
-)
-);
+  );
 }
 
 
