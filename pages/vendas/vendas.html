@@ -8,34 +8,224 @@
     
 </head>
 <body>
-    <header>
-        <nav>
-          <div class="left">
-              <a href="../home/home.html"><h3>Cine <span>Talk</span></h3></a>
-          </div>
-  
-          <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-  
-          <ul class="nav-list">
-            <li><a href="#">Painel de Controle</a></li>
-            <li><a href="../usuario/usuario.html">Usúarios</a></li>
-            <li><a href="../filmes/filmes.html">Filmes</a></li>
-            <li><a href="../vendas/vendas.html">Vendas</a></li>
-          </ul>
-  
-          <div class="right">
-            <button type="button" class="sair_btn" onclick="logout()">
-              SAIR
-            </button>
-          </div>
-        </nav>
-      </header>
+  <header>
+    <nav>
+      <div class="left">
+          <a href="../painelDeControle/painelDeControle.html"><h3>Cine <span>Talk</span></h3></a>
+      </div>
+
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+      <ul class="nav-list">
+        <li><a href="../home/home.html">Vendas</a></li>
+        <li><a href="../usuario/usuario.html">Usúarios</a></li>
+        <li><a href="../filmes/filmes.html">Filmes</a></li>
+        <li><a href="../vendas/vendas.html">Painel de Controle</a></li>
+      </ul>
+
+      <div class="right">
+        <button type="button" class="sair_btn" onclick="logout()">
+          SAIR
+        </button>
+          
+      </div>
+    </nav>
+  </header>
         <main></main>
         <script src="../../mobile-navbar.js"></script>
+
+
+        <div class="container">
+          <header>
+            <div class="title-box">
+              <h1 class="title">Dashboard</h1>
+              <p>Total de Seguidores: 23,004</p>
+            </div>
+      
+            
+          </header>
+      
+          <main>
+            <section class="followers">
+              <article class="card facebook">
+                <span class="username">
+                  <img src="./images/icon-facebook.svg" alt="facebook">
+                  @CineTalk
+                </span>
+                <p class="count-follow">
+                  <span>1987</span>
+                  Seguidores
+                </p>
+                <span>
+                  <img src="./images/icon-up.svg" alt="Up Followers">
+                  12 Today
+                </span>
+              </article>
+              <article class="card twitter">
+                <span class="username">
+                  <img src="./images/icon-twitter.svg" alt="facebook">
+                  @CineTalk
+                </span>
+                <p class="count-follow">
+                  <span>1044</span>
+                  Seguidores
+                </p>
+                <span>
+                  <img src="./images/icon-up.svg" alt="Up Followers">
+                  99 Today
+                </span>
+              </article>
+              <article class="card instagram">
+                <span class="username">
+                  <img src="./images/icon-instagram.svg" alt="facebook">
+                  @CineTalk
+                </span>
+                <p class="count-follow">
+                  <span>11K</span>
+                  Seguidores
+                </p>
+                <span>
+                  <img src="./images/icon-up.svg" alt="Up Followers">
+                  1099 Today
+                </span>
+              </article>
+              <article class="card youtube">
+                <span class="username">
+                  <img src="./images/icon-youtube.svg" alt="facebook">
+                  CineTalk
+                </span>
+                <p class="count-follow">
+                  <span>8239</span>
+                  Subscribers
+                </p>
+                <span class="down">
+                  <img src="./images/icon-down.svg" alt="Up Followers">
+                  144 Today
+                </span>
+              </article>
+            </section>
+            <section class="overview">
+              <h2>Overview - Today</h2>
+              <div class="grid-overview">
+                <article class="card">
+                  <div class="title-card">
+                    <span>Page Views</span>
+                    <img src="./images/icon-facebook.svg" alt="facebook">
+                  </div>
+                  <div class="text-card">
+                    <p>87</p>
+                    <span>
+                      <img src="./images/icon-up.svg" alt="Up page view">
+                      3%
+                    </span>
+                  </div>
+                </article>
+                <article class="card">
+                  <div class="title-card">
+                    <span>Likes</span>
+                    <img src="./images/icon-facebook.svg" alt="facebook">
+                  </div>
+                  <div class="text-card">
+                    <p>52</p>
+                    <span class="down">
+                      <img src="./images/icon-down.svg" alt="Up like facebook">
+                      2%
+                    </span>
+                  </div>
+                </article>
+                <article class="card">
+                  <div class="title-card">
+                    <span>Likes</span>
+                    <img src="./images/icon-instagram.svg" alt="instagram">
+                  </div>
+                  <div class="text-card">
+                    <p>5462</p>
+                    <span>
+                      <img src="./images/icon-up.svg" alt="Up like instagram">
+                      2257%
+                    </span>
+                  </div>
+                </article>
+                <article class="card">
+                  <div class="title-card">
+                    <span>Profile Views</span>
+                    <img src="./images/icon-instagram.svg" alt="instagram">
+                  </div>
+                  <div class="text-card">
+                    <p>52K</p>
+                    <span>
+                      <img src="./images/icon-up.svg" alt="Up page view">
+                      1375%
+                    </span>
+                  </div>
+                </article>
+                <article class="card">
+                  <div class="title-card">
+                    <span>Retweets</span>
+                    <img src="./images/icon-twitter.svg" alt="twitter">
+                  </div>
+                  <div class="text-card">
+                    <p>117</p>
+                    <span>
+                      <img src="./images/icon-up.svg" alt="Up Retweet twitter">
+                      303%
+                    </span>
+                  </div>
+                </article>
+                <article class="card">
+                  <div class="title-card">
+                    <span>Likes</span>
+                    <img src="./images/icon-twitter.svg" alt="twitter">
+                  </div>
+                  <div class="text-card">
+                    <p>507</p>
+                    <span>
+                      <img src="./images/icon-up.svg" alt="Up like twitter">
+                      553%
+                    </span>
+                  </div>
+                </article>
+                <article class="card">
+                  <div class="title-card">
+                    <span>Likes</span>
+                    <img src="./images/icon-youtube.svg" alt="youtube">
+                  </div>
+                  <div class="text-card">
+                    <p>107</p>
+                    <span class="down">
+                      <img src="./images/icon-down.svg" alt="Down like">
+                      19%
+                    </span>
+                  </div>
+                </article>
+                <article class="card">
+                  <div class="title-card">
+                    <span>Total Views</span>
+                    <img src="./images/icon-youtube.svg" alt="youtube">
+                  </div>
+                  <div class="text-card">
+                    <p>1407</p>
+                    <span class="down">
+                      <img src="./images/icon-down.svg" alt="Down view">
+                      12%
+                    </span>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </main>
+        </div>
+      
+        <footer class="attribution">
+          Challenge by IFPE - Paulista.</a>. 
+          Coded by Web group.
+        </footer>
+      
+        <script src="./js/index.js"></script>
 
         
 
@@ -51,5 +241,15 @@
 <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-auth-compat.js"></script>
 <script src="../../firebase-init.js"></script>
 <script src='../../auth-guard.js'></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/mobile.css">
+
 
 </html>
