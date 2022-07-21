@@ -25,7 +25,7 @@
         </div>
 
         <ul class="nav-list">
-          <li><a href="../home/home.html">Vendas</a></li>
+          <li><a href="../home/home.html">QUIZ</a></li>
           <li><a href="../usuario/usuario.html">Usúarios</a></li>
           <li><a href="../filmes/filmes.html">Filmes</a></li>
           <li><a href="../vendas/vendas.html">Painel de Controle</a></li>
@@ -39,51 +39,46 @@
         </div>
       </nav>
     </header>
-
-    <div class="cardBox">
-      <!--Sales-->
-      <div class="card">
-        <div>
-          <div class = "numbers">82</div>
-          <div class = "cardName">Usuários registrados</div>
-        </div>
-      </div>
-      <!---->
-      <!--Comments-->
-      <div class="card">
-        <div>
-          <div class = "numbers">208</div>
-          <div class = "cardName">Ingressos vendidos</div>
-        </div>
-      </div>
-      <!---->
-      <!--Earning-->
-      <div class="card">
-        <div>
-          <div class = "numbers">R$6.034</div>
-          <div class = "cardName">Saldo</div>
-        </div>
-      </div>
-    </div>
-
-    <div class = "details">
-      <div class = "recentOrders">
-        <div class="cardHeader">
-          <h2>Recent Orders</h2>
-          <a href="../usuario/usuario.html" class="btn_user">View all</a>
-        </div>
-      </div>
-      <div class="recentCustomers">
-        <div class="cardHeader">
-          <h2>Recent Customers</h2>
-        </div>
-      </div>
-    </div>
-
     <main></main>
     <script src="../../mobile-navbar.js"></script>
     <!--Fim Menu-->
 
+    <h1>Adivinhe a bandeira</h1>
+
+    <!-- Pantalla inicial -->
+    <div id="pantalla-inicial">
+        <p>A qual país pertence a bandeira?</p>
+        <button class="btn" onclick="comenzarJuego()">COMEÇAR A JOGAR</button>
+    </div>
+
+    <!-- Pantalla juego -->
+    <div class="pantalla-juego" id="pantalla-juego">
+        <img src="img/ad.svg" alt="" id="imgBandera">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">OPÇÃO A</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">OPÇÃO B</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">OPÇÃO C</div>
+            </div>
+        </div>
+    </div>
+    <!-- Pantalla final -->
+    <div id="pantalla-final">
+        <h2>CORRETAS: <span id="numCorrectas">3</span></h2>
+        <h2>INCORRETAS: <span id="numIncorrectas">2</span></h2>
+        <button class="btn" onclick="volverAlInicio()">VOLTAR AO INICIO</button>
+    </div>
+
+
+
+    
 
 </body>
 
